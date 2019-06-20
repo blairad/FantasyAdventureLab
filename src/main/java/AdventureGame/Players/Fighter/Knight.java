@@ -1,4 +1,4 @@
-package AdventureGame.Players;
+package AdventureGame.Players.Fighter;
 
 public class Knight extends Fighter{
 

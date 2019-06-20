@@ -1,4 +1,6 @@
-package AdventureGame.Players;
+package AdventureGame.Players.Fighter;
+
+import AdventureGame.Players.Player;
 
 public abstract class Fighter extends Player {
 

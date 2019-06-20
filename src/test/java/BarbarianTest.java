@@ -1,4 +1,4 @@
-import AdventureGame.Players.Barbarian;
+import AdventureGame.Players.Fighter.Barbarian;
 import org.junit.Before;
 import org.junit.Test;
 

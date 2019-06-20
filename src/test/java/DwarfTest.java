@@ -1,5 +1,4 @@
-import AdventureGame.Players.Dwarf;
-import AdventureGame.Players.Player;
+import AdventureGame.Players.Fighter.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
 
