@@ -6,7 +6,7 @@ public abstract class Mage extends Player {
     int abilityValue;
 
     public Mage(String name, int healthPoints, int abilityValue) {
-        super(name, healthPoints);
+        super(name, healthPoints, abilityValue);
 
         this.abilityValue = abilityValue;
 
