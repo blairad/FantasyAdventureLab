@@ -1,7 +1,14 @@
 package AdventureGame.Players.Mages;
 
-public class Wizard extends Mage{
-    public Wizard(String name, int healthPoints, int abilityValue) {
-        super(name, healthPoints, abilityValue);
+import AdventureGame.Interfaces.ISpell;
+
+public class Wizard extends Mage implements ISpell {
+    public Wizard(String name, int healthPoints, int abilityValue, int spellDamage) {
+        super(name, healthPoints, abilityValue, spellDamage);
     }
+
+    public void spellDamage(int damage){
+        spellDamage += damage;
+    }
+
 }

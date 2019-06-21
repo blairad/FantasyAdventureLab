@@ -1,3 +1,5 @@
+package MageTests;
+
 import AdventureGame.Players.Mages.Warlock;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +12,7 @@ public class WarlockTest {
     @Before
 
     public void before(){
-        warlock = new Warlock("Wilson", 100, 5);
+        warlock = new Warlock("Wilson", 100, 5, 20);
     }
 
     @Test
@@ -27,4 +29,11 @@ public class WarlockTest {
     public void mageHasAHealthAbilityLevel(){
         assertEquals(5, warlock.getAbilityValue());
     }
+
+    @Test
+    public void canDamage(){
+        assertEquals(20, warlock.spellDamage);
+    }
+
+
 }

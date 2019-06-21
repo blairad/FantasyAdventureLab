@@ -7,10 +7,7 @@ public class Cleric {
     public Cleric(String name, int healthPoints){
         this.name = name;
         this.healthPoints = healthPoints;
-
-
     }
-
 
     public String getName(){
         return this.name;

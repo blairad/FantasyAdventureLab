@@ -1,3 +1,5 @@
+package MythicalBeastsTests;
+
 import AdventureGame.Characters.Enemies.MythicalBeasts.Dragon;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,7 +1,13 @@
 package AdventureGame.Players.Mages;
 
-public class Warlock extends Mage{
-    public Warlock(String name, int healthPoints, int abilityValue) {
-        super(name, healthPoints, abilityValue);
+import AdventureGame.Interfaces.ISpell;
+
+public class Warlock extends Mage implements ISpell{
+    public Warlock(String name, int healthPoints, int abilityValue, int spellDamage) {
+        super(name, healthPoints, abilityValue, spellDamage);
+    }
+
+    public void spellDamage(int damage){
+        spellDamage += damage;
     }
 }

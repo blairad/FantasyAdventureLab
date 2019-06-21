@@ -3,12 +3,14 @@ package AdventureGame.Players.Mages;
 import AdventureGame.Players.Player;
 
 public abstract class Mage extends Player {
-    int abilityValue;
+    public int abilityValue;
+    public int spellDamage;
 
-    public Mage(String name, int healthPoints, int abilityValue) {
+    public Mage(String name, int healthPoints, int abilityValue, int spellDamage) {
         super(name, healthPoints, abilityValue);
 
         this.abilityValue = abilityValue;
+        this.spellDamage = spellDamage;
 
     }
 

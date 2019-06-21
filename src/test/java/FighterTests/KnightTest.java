@@ -1,3 +1,5 @@
+package FighterTests;
+
 import AdventureGame.Players.Fighter.Knight;
 import AdventureGame.Players.Fighter.Weapons;
 import org.junit.Before;

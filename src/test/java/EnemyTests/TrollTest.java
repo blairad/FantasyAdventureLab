@@ -1,3 +1,5 @@
+package EnemyTests;
+
 import AdventureGame.Characters.Enemies.Troll;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,3 +1,5 @@
+package MageTests;
+
 import AdventureGame.Players.Mages.Warlock;
 import AdventureGame.Players.Mages.Wizard;
 import org.junit.Before;
@@ -12,7 +14,7 @@ public class WizardTest {
     @Before
 
     public void before(){
-        wizard = new Wizard("Stanley", 100, 6);
+        wizard = new Wizard("Stanley", 100, 6, 20);
     }
 
     @Test
@@ -29,4 +31,10 @@ public class WizardTest {
     public void mageHasAHealthAbilityLevel(){
         assertEquals(6, wizard.getAbilityValue());
     }
+
+    @Test
+    public void canDamage(){
+        assertEquals(20, wizard.spellDamage);
+    }
+
 }

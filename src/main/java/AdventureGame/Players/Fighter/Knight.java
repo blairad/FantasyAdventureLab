@@ -12,7 +12,6 @@ public class Knight extends Fighter implements IWeapon {
         this.weapon = weapon;
     }
 
-
     public int weaponDamage(){
         return this.weapon.getDamage();
     }

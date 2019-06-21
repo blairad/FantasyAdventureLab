@@ -1,9 +1,9 @@
 package AdventureGame.Players;
 
 public abstract class Player {
-    String name;
-    int healthPoints;
-    int weaponDamage;
+    protected String name;
+    protected int healthPoints;
+    protected int weaponDamage;
 
     public Player(String name, int healthPoints, int weaponDamage){
         this.name = name;
@@ -19,8 +19,6 @@ public abstract class Player {
     public int getHealthPoints(){
         return this.healthPoints;
     }
-
-
 
     public int getWeaponDamage(){return this.weaponDamage;}
 

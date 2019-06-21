@@ -1,3 +1,5 @@
+package EnemyTests;
+
 import AdventureGame.Characters.Enemies.Orc;
 import org.junit.Before;
 import org.junit.Test;
