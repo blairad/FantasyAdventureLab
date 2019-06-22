@@ -1,6 +1,7 @@
 package FighterTests;
 
 import AdventureGame.Players.Fighter.Dwarf;
+import AdventureGame.Players.Fighter.Weapons;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ public class DwarfTest {
     @Before
 
     public void before(){
-        dwarf = new Dwarf("Clarence", 100, 15,5);
+        dwarf = new Dwarf("Clarence", 100, 15,5, Weapons.AXE);
     }
 
     @Test
@@ -24,4 +25,15 @@ public class DwarfTest {
     public void playerHasAHealthPoints(){
         assertEquals(100, dwarf.getHealthPoints());
     }
+
+   @Test
+    public void playerDefendAttack() {assertEquals(5, dwarf.attackDefended());}
+
+    @Test
+    public void playerCanGetWeapon(){
+        assertEquals(Weapons.AXE, dwarf.getWeapon());
+    }
+
+    @Test
+    public void canGetWeaponDamage(){assertEquals(25, dwarf.weaponDamage());}
 }

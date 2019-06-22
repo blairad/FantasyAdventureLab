@@ -28,12 +28,12 @@ public class KnightTest {
     }
 
     @Test
+    public void playerDefendAttack() {assertEquals(5, knight.attackDefended());}
+
+    @Test
     public void playerCanGetWeapon(){
         assertEquals(Weapons.LONG_SWORD, knight.getWeapon());
     }
-
-
-
 
     @Test
     public void canGetWeaponDamage(){assertEquals(20, knight.weaponDamage());}

@@ -1,6 +1,7 @@
 package FighterTests;
 
 import AdventureGame.Players.Fighter.Barbarian;
+import AdventureGame.Players.Fighter.Weapons;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class BarbarianTest {
 
     @Before
     public void before(){
-        barbarian = new Barbarian("Clive", 100, 10,5);
+        barbarian = new Barbarian("Clive", 100, 10,5, Weapons.MACE);
     }
 
     @Test
@@ -23,4 +24,15 @@ public class BarbarianTest {
     public void playerHasAHealthPoints(){
         assertEquals(100, barbarian.getHealthPoints());
     }
+
+    @Test
+    public void playerDefendAttack() {assertEquals(5, barbarian.attackDefended());}
+
+    @Test
+    public void playerCanGetWeapon(){
+        assertEquals(Weapons.MACE, barbarian.getWeapon());
+    }
+
+    @Test
+    public void canGetWeaponDamage(){assertEquals(15, barbarian.weaponDamage());}
 }
