@@ -2,6 +2,6 @@ package AdventureGame.Interfaces;
 
 public interface IDefend {
 
-//    public void defend(int)
+    public int defendAttack(int defendAttack);
 
 }

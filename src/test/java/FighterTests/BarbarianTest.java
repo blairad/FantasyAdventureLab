@@ -9,9 +9,9 @@ import static org.junit.Assert.assertEquals;
 public class BarbarianTest {
     Barbarian barbarian;
 
-            @Before
+    @Before
     public void before(){
-        barbarian = new Barbarian("Clive", 100, 10);
+        barbarian = new Barbarian("Clive", 100, 10,5);
     }
 
     @Test

@@ -14,7 +14,7 @@ public class KnightTest {
     @Before
 
     public void before(){
-        knight = new Knight("Dave", 100, 20, Weapons.LONG_SWORD);
+        knight = new Knight("Dave", 100, 20, Weapons.LONG_SWORD,5);
     }
 
     @Test

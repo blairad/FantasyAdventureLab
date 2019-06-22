@@ -1,13 +1,20 @@
 package AdventureGame.Players.Fighter;
 
+import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 import AdventureGame.Players.Player;
 
-public abstract class Fighter extends Player implements IWeapon {
+public abstract class Fighter extends Player implements IWeapon, IDefend {
 
+    public Fighter(String name, int healthPoints, int weaponDamage, int attackDefended) {
+        super(name, healthPoints, weaponDamage, attackDefended);
 
+        this.attackDefended = 5;
+    }
 
-    public Fighter(String name, int healthPoints, int weaponDamage) {
-        super(name, healthPoints, weaponDamage);
+    protected int attackDefended;
+
+    public int attackDefended() {
+        return attackDefended;
     }
 }

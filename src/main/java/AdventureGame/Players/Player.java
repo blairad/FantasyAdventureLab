@@ -4,11 +4,13 @@ public abstract class Player {
     protected String name;
     protected int healthPoints;
     protected int weaponDamage;
+    protected int attackDefended;
 
-    public Player(String name, int healthPoints, int weaponDamage){
+    public Player(String name, int healthPoints, int weaponDamage, int attackDefended){
         this.name = name;
         this.healthPoints = healthPoints;
         this.weaponDamage = weaponDamage;
+        this.attackDefended = attackDefended;
 
     }
 
@@ -21,6 +23,8 @@ public abstract class Player {
     }
 
     public int getWeaponDamage(){return this.weaponDamage;}
+
+    public int attackDefended(){return this.attackDefended;}
 
 
 

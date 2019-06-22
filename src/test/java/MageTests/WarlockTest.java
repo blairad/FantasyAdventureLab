@@ -12,7 +12,7 @@ public class WarlockTest {
     @Before
 
     public void before(){
-        warlock = new Warlock("Wilson", 100, 5, 20);
+        warlock = new Warlock("Wilson", 100, 5, 20,5);
     }
 
     @Test
@@ -33,6 +33,10 @@ public class WarlockTest {
     @Test
     public void canDamage(){
         assertEquals(20, warlock.spellDamage);
+    }
+    @Test
+    public void canDefendAttack(){
+        assertEquals(5, warlock.defendAttack);
     }
 
 

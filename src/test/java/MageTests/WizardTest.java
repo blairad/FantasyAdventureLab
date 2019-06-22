@@ -14,7 +14,7 @@ public class WizardTest {
     @Before
 
     public void before(){
-        wizard = new Wizard("Stanley", 100, 6, 20);
+        wizard = new Wizard("Stanley", 100, 6, 20,5);
     }
 
     @Test
@@ -35,6 +35,10 @@ public class WizardTest {
     @Test
     public void canDamage(){
         assertEquals(20, wizard.spellDamage);
+    }
+    @Test
+    public void canDefendAttack(){
+        assertEquals(5, wizard.defendAttack);
     }
 
 }

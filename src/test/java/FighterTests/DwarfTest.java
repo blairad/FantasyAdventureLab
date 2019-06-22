@@ -12,7 +12,7 @@ public class DwarfTest {
     @Before
 
     public void before(){
-        dwarf = new Dwarf("Clarence", 100, 15);
+        dwarf = new Dwarf("Clarence", 100, 15,5);
     }
 
     @Test

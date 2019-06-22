@@ -1,14 +1,15 @@
 package AdventureGame.Players.Fighter;
 
+import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 
 
-public class Knight extends Fighter implements IWeapon {
+public class Knight extends Fighter implements IWeapon, IDefend {
 
     Weapons weapon;
 
-    public Knight(String name, int healthPoints, int damagePoints, Weapons weapon) {
-        super(name, healthPoints, damagePoints);
+    public Knight(String name, int healthPoints, int damagePoints, Weapons weapon, int defendAttack) {
+        super(name, healthPoints, damagePoints, defendAttack);
         this.weapon = weapon;
     }
 
@@ -19,4 +20,7 @@ public class Knight extends Fighter implements IWeapon {
     public Weapons getWeapon(){
         return this.weapon;
     }
+
+    public int defendAttack(int defendAttack){
+        return this.attackDefended;}
 }

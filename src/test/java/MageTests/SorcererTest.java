@@ -13,7 +13,7 @@ public class SorcererTest {
     @Before
 
     public void before(){
-        sorcerer = new Sorcerer("Ron", 100, 3, 20);
+        sorcerer = new Sorcerer("Ron", 100, 3, 20, 5);
     }
 
     @Test
@@ -34,6 +34,10 @@ public class SorcererTest {
     @Test
     public void canDamage(){
         assertEquals(20, sorcerer.spellDamage);
+    }
+    @Test
+    public void canDefendAttack(){
+        assertEquals(5, sorcerer.defendAttack);
     }
 
 }
