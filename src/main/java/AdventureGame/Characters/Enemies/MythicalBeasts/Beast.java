@@ -3,7 +3,7 @@ package AdventureGame.Characters.Enemies.MythicalBeasts;
 import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 
-public abstract class Beast implements IDefend, IWeapon {
+public abstract class Beast  {
     String beastType;
     int beastHealthPoint;
 

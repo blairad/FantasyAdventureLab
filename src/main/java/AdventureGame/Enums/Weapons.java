@@ -5,7 +5,8 @@ public enum Weapons {
     MACE(15),
     LONG_SWORD(20),
     CLUB(40),
-    DAGGER(10);
+    DAGGER(10),
+    BREATHS_FIRE(75);
 
     private final int damage;
 

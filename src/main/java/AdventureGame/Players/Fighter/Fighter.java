@@ -4,7 +4,7 @@ import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 import AdventureGame.Players.Player;
 
-public abstract class Fighter extends Player implements IWeapon, IDefend {
+public abstract class Fighter extends Player {
 
     public Fighter(String name, int healthPoints, int attackDefended) {
         super(name, healthPoints, attackDefended);
