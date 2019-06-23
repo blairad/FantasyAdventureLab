@@ -7,9 +7,9 @@ import AdventureGame.Interfaces.IWeapon;
 public class Barbarian extends Fighter implements IWeapon, IDefend {
 
     Weapons weapon;
-
-    public Barbarian(String name, int healthPoints, int damagePoints, int attackDefended, Weapons weapon) {
-        super(name, healthPoints, damagePoints, attackDefended);
+//    int damagePoints,
+    public Barbarian(String name, int healthPoints, int attackDefended, Weapons weapon) {
+        super(name, healthPoints, attackDefended);
         this.weapon = weapon;
     }
 
@@ -24,5 +24,12 @@ public class Barbarian extends Fighter implements IWeapon, IDefend {
     public int defendAttack(int defendAttack) {
         return attackDefended;
     }
+
+    public int currentHealthPoints(){return healthPoints;}
+
+    public int calculateHealthAfterDamage(int weaponDamage) {
+        return this.healthPoints -= weaponDamage;
+    }
+
 
 }

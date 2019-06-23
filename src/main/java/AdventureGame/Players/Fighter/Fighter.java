@@ -6,8 +6,8 @@ import AdventureGame.Players.Player;
 
 public abstract class Fighter extends Player implements IWeapon, IDefend {
 
-    public Fighter(String name, int healthPoints, int weaponDamage, int attackDefended) {
-        super(name, healthPoints, weaponDamage, attackDefended);
+    public Fighter(String name, int healthPoints, int attackDefended) {
+        super(name, healthPoints, attackDefended);
 
         this.attackDefended = 5;
     }
@@ -18,6 +18,5 @@ public abstract class Fighter extends Player implements IWeapon, IDefend {
         return attackDefended;
     }
 
-//    public int recievesDamage(){
-//        return this.healthPoints -= weaponDamage;
+
 }

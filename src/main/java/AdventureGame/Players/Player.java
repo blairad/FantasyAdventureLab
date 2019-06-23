@@ -6,7 +6,7 @@ public abstract class Player {
     protected int weaponDamage;
     protected int attackDefended;
 
-    public Player(String name, int healthPoints, int weaponDamage, int attackDefended){
+    public Player(String name, int healthPoints, int attackDefended){
         this.name = name;
         this.healthPoints = healthPoints;
         this.weaponDamage = weaponDamage;

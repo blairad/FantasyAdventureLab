@@ -12,9 +12,8 @@ public class KnightTest {
     Knight knight;
 
     @Before
-
     public void before(){
-        knight = new Knight("Dave", 100, 20, Weapons.LONG_SWORD,5);
+        knight = new Knight("Dave", 100, Weapons.LONG_SWORD,5);
     }
 
     @Test
@@ -37,5 +36,11 @@ public class KnightTest {
 
     @Test
     public void canGetWeaponDamage(){assertEquals(Weapons.LONG_SWORD.getDamage(), knight.getWeapon().getDamage());
+    }
+    @Test
+    public void canTakeDamage()
+    {
+        knight.calculateHealthAfterDamage(15);
+        assertEquals(85, knight.currentHealthPoints());
     }
 }

@@ -13,7 +13,7 @@ public class DwarfTest {
     @Before
 
     public void before(){
-        dwarf = new Dwarf("Clarence", 100, 15,5, Weapons.AXE);
+        dwarf = new Dwarf("Clarence", 100, 5, Weapons.AXE);
     }
 
     @Test
@@ -36,5 +36,11 @@ public class DwarfTest {
 
     @Test
     public void canGetWeaponDamage(){assertEquals(Weapons.AXE.getDamage(), dwarf.getWeapon().getDamage());
+    }
+    @Test
+    public void canTakeDamage()
+    {
+        dwarf.calculateHealthAfterDamage(15);
+        assertEquals(85, dwarf.currentHealthPoints());
     }
 }

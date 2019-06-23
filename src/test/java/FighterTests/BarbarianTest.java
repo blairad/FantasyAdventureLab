@@ -15,7 +15,7 @@ public class BarbarianTest {
     @Before
     public void before(){
 
-        barbarian = new Barbarian("Clive", 100, 10,5, Weapons.MACE);
+        barbarian = new Barbarian("Clive", 100, 10, Weapons.MACE);
 //        enemy = new Enemy("30", "Orc");
     }
 
@@ -40,5 +40,12 @@ public class BarbarianTest {
 
     @Test
     public void canGetWeaponDamage(){assertEquals(Weapons.MACE.getDamage(), barbarian.getWeapon().getDamage());
+    }
+
+    @Test
+    public void canTakeDamage()
+    {
+        barbarian.calculateHealthAfterDamage(15);
+        assertEquals(85, barbarian.currentHealthPoints());
     }
 }
