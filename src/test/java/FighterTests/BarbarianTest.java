@@ -1,5 +1,6 @@
 package FighterTests;
 
+import AdventureGame.Characters.Enemies.Enemy;
 import AdventureGame.Players.Fighter.Barbarian;
 import AdventureGame.Enums.Weapons;
 import org.junit.Before;
@@ -9,11 +10,15 @@ import static org.junit.Assert.assertEquals;
 
 public class BarbarianTest {
     Barbarian barbarian;
+    Enemy enemy;
 
     @Before
     public void before(){
+
         barbarian = new Barbarian("Clive", 100, 10,5, Weapons.MACE);
+//        enemy = new Enemy("30", "Orc");
     }
+
 
     @Test
     public void playerHasAName(){
@@ -34,5 +39,6 @@ public class BarbarianTest {
     }
 
     @Test
-    public void canGetWeaponDamage(){assertEquals(15, barbarian.weaponDamage());}
+    public void canGetWeaponDamage(){assertEquals(Weapons.MACE.getDamage(), barbarian.getWeapon().getDamage());
+    }
 }

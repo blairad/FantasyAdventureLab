@@ -1,6 +1,8 @@
 package AdventureGame.Characters.Enemies;
 
-public abstract class Enemy {
+import AdventureGame.Interfaces.IWeapon;
+
+public abstract class Enemy implements IWeapon {
     int healthPoints;
     String enemyType;
 

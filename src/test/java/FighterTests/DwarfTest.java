@@ -35,5 +35,6 @@ public class DwarfTest {
     }
 
     @Test
-    public void canGetWeaponDamage(){assertEquals(25, dwarf.weaponDamage());}
+    public void canGetWeaponDamage(){assertEquals(Weapons.AXE.getDamage(), dwarf.getWeapon().getDamage());
+    }
 }

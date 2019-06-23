@@ -17,4 +17,7 @@ public abstract class Fighter extends Player implements IWeapon, IDefend {
     public int attackDefended() {
         return attackDefended;
     }
+
+//    public int recievesDamage(){
+//        return this.healthPoints -= weaponDamage;
 }
