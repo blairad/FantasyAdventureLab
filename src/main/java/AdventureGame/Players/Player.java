@@ -11,7 +11,6 @@ public abstract class Player {
         this.healthPoints = healthPoints;
         this.weaponDamage = weaponDamage;
         this.attackDefended = attackDefended;
-
     }
 
     public String getName(){
@@ -25,6 +24,7 @@ public abstract class Player {
     public int getWeaponDamage(){return this.weaponDamage;}
 
     public int attackDefended(){return this.attackDefended;}
+
 
 
 

@@ -1,5 +1,6 @@
 package MageTests;
 
+import AdventureGame.Enums.Spells;
 import AdventureGame.Players.Mages.Warlock;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,7 @@ public class WarlockTest {
     @Before
 
     public void before(){
-        warlock = new Warlock("Wilson", 100, 5, 20,5);
+        warlock = new Warlock("Wilson", 100, 5, 2, Spells.LIGHTENING_STRIKE);
     }
 
     @Test
@@ -30,14 +31,22 @@ public class WarlockTest {
         assertEquals(5, warlock.getAbilityValue());
     }
 
-    @Test
-    public void canDamage(){
-        assertEquals(20, warlock.spellDamage);
-    }
+//    @Test
+//    public void canDamage(){
+//        assertEquals(20, warlock.spellDamage);
+//    }
+
     @Test
     public void canDefendAttack(){
-        assertEquals(5, warlock.defendAttack);
+        assertEquals(2, warlock.defendAttack);
     }
 
-
+    @Test
+    public void canGetSpellType(){
+        assertEquals(Spells.LIGHTENING_STRIKE, warlock.getSpellType());
+    }
+    @Test
+    public void canGetWeaponDamage(){
+        assertEquals(Spells.LIGHTENING_STRIKE.spellDamageValue(), warlock.getSpellType().spellDamageValue());
+    }
 }

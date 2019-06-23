@@ -1,6 +1,6 @@
 package MageTests;
 
-import AdventureGame.Players.Mages.Warlock;
+import AdventureGame.Enums.Spells;
 import AdventureGame.Players.Mages.Wizard;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class WizardTest {
     @Before
 
     public void before(){
-        wizard = new Wizard("Stanley", 100, 6, 20,5);
+        wizard = new Wizard("Stanley", 100, 6, 2, Spells.ICE_STRIKE);
     }
 
     @Test
@@ -33,12 +33,17 @@ public class WizardTest {
     }
 
     @Test
-    public void canDamage(){
-        assertEquals(20, wizard.spellDamage);
-    }
-    @Test
     public void canDefendAttack(){
-        assertEquals(5, wizard.defendAttack);
+        assertEquals(2, wizard.defendAttack);
     }
 
+    @Test
+    public void canGetSpellType(){
+        assertEquals(Spells.ICE_STRIKE, wizard.getSpellType());
+    }
+
+    @Test
+    public void canGetWeaponDamage(){
+        assertEquals(Spells.ICE_STRIKE.spellDamageValue(), wizard.getSpellType().spellDamageValue());
+    }
 }

@@ -1,5 +1,6 @@
 package AdventureGame.Players.Fighter;
 
+import AdventureGame.Enums.Weapons;
 import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 
@@ -20,7 +21,7 @@ public class Barbarian extends Fighter implements IWeapon, IDefend {
         return this.weapon;
     }
 
-    public int defendAttack(int attackDefended){
+    public int defendAttack(int defendAttack){
         return attackDefended;
 
     }

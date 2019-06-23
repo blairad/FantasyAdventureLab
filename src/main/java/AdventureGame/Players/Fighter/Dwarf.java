@@ -1,5 +1,6 @@
 package AdventureGame.Players.Fighter;
 
+import AdventureGame.Enums.Weapons;
 import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.IWeapon;
 

@@ -1,17 +1,27 @@
 package AdventureGame.Players.Mages;
 
+import AdventureGame.Enums.Spells;
+import AdventureGame.Interfaces.IDefend;
 import AdventureGame.Interfaces.ISpell;
 
-public class Wizard extends Mage implements ISpell {
-    public Wizard(String name, int healthPoints, int abilityValue, int spellDamage, int defendAttack) {
-        super(name, healthPoints, abilityValue, spellDamage, defendAttack);
+public class Wizard extends Mage implements ISpell, IDefend {
+
+    Spells spell;
+
+    public Wizard(String name, int healthPoints, int abilityValue, int defendAttack, Spells spell) {
+        super(name, healthPoints, abilityValue, defendAttack);
+
+        this.spell = spell;
     }
 
-    public void spellDamage(int damage){
-        spellDamage += damage;
+    public Spells getSpellType(){return this.spell; }
+
+    public int spellDamage(int damageSpell){
+        return this.spell.spellDamageValue();
     }
-    public void defendAttack(int damage){
-        defendAttack -= damage;
+
+    public int defendAttack(int defendAttack){
+        return attackDefended;
     }
 
 }

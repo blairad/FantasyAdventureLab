@@ -1,6 +1,7 @@
 package MageTests;
 
 import AdventureGame.Players.Mages.Sorcerer;
+import AdventureGame.Enums.Spells;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ public class SorcererTest {
     @Before
 
     public void before(){
-        sorcerer = new Sorcerer("Ron", 100, 3, 20, 5);
+        sorcerer = new Sorcerer("Ron", 100, 3, 2, Spells.FIREBALL);
     }
 
     @Test
@@ -33,11 +34,21 @@ public class SorcererTest {
 
     @Test
     public void canDamage(){
-        assertEquals(20, sorcerer.spellDamage);
+        assertEquals(25,  Spells.FIREBALL.spellDamageValue());
     }
+
     @Test
     public void canDefendAttack(){
-        assertEquals(5, sorcerer.defendAttack);
+        assertEquals(2, sorcerer.defendAttack);
+    }
+    @Test
+    public void canGetSpellType(){
+        assertEquals(Spells.FIREBALL, sorcerer.getSpellType());
+    }
+
+    @Test
+    public void canGetWeaponDamage(){
+        assertEquals(Spells.FIREBALL.spellDamageValue(), sorcerer.getSpellType().spellDamageValue());
     }
 
 }

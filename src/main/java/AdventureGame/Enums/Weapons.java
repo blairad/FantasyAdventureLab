@@ -1,4 +1,4 @@
-package AdventureGame.Players.Fighter;
+package AdventureGame.Enums;
 
 public enum Weapons {
     AXE(25),

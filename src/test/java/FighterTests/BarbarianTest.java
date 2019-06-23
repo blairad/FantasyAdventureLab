@@ -1,7 +1,7 @@
 package FighterTests;
 
 import AdventureGame.Players.Fighter.Barbarian;
-import AdventureGame.Players.Fighter.Weapons;
+import AdventureGame.Enums.Weapons;
 import org.junit.Before;
 import org.junit.Test;
 
